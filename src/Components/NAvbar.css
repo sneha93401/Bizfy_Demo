@@ -1,0 +1,158 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  background: transparent;
+  /* background-color: #063b66f3; */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  z-index: 1000; 
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between icon and text */
+}
+
+.logo-dot img {
+  width: 200px; 
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Links Section */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(71, 71, 71);
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+.navbar-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0E62A6;
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%; /* Underline effect */
+}
+
+/* Button Section */
+.navbar-button button {
+  position: relative;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-button button:hover {
+  background: #4e504f;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo-dot img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border: none;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .navbar-button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    flex-direction: column; /* Stack logo icon and text vertically */
+    align-items: center;
+    gap: 5px;
+  }
+
+  .logo-dot img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .navbar-button button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
