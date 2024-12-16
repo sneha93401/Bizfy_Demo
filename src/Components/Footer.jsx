@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
                 <div className="footer_img_container">
                     <div className="footer_img">
-                        <img src='/public/white logo-02.png' alt="" />
+                        <img src='/white logo-02.png' alt="" />
                     </div>
                 </div>
             </footer>
